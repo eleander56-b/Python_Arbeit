@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 import getpass
 
-# in Starface ausführen mit "c:\Users\ebrecht\Starface_anrufe\anrufe.py" $(callerid)
+# in Starface ausführen mit "c:\Users\<username>\Starface_anrufe\anrufe.py" $(callerid)
 
 # Den aktuellen Username auslesen
 username = getpass.getuser()
