@@ -32,7 +32,7 @@ if len(str(nummer)) != 2:
             Ganzername = line.split(";")[0] + " " + line.split(";")[1]
             Firma = line.split(";")[2]
             
-    # Die oben festgelegte Datei erstellen und Den Inhalt reinschreiben
+    # Die oben festgelegte Datei erstellen und den Inhalt reinschreiben
     with open(filename, "w") as text:
         text.write("Datum: " + datetime.now().strftime('%Y-%m-%d') + "\n")
         text.write("Uhrzeit: " + datetime.now().strftime('%H:%M:%S') + "\n\n")
@@ -43,7 +43,7 @@ if len(str(nummer)) != 2:
     # Die erstellte Datei Öffnen
     os.startfile(filename)
     
-# Wenn Interne Rufnummer kleine Nachricht erstellen
+# Wenn Interne Rufnummer -> Nachricht erstellen
 else:
     if sys.argv[1] == "10":
         name = "Peter"
