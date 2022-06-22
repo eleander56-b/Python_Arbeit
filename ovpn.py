@@ -2,13 +2,10 @@ import os
 # Alles Installieren, was gebraucht wird
 try:
     import OpenSSL
+    from OpenSSL.crypto import load_pkcs12, dump_privatekey, dump_certificate, FILETYPE_PEM
 except ImportError:
     os.system('pip install pyOpenSSL')
-try:
-    import requests
-except ImportError:
-    os.system('pip install requests')
-from OpenSSL.crypto import load_pkcs12, dump_privatekey, dump_certificate, FILETYPE_PEM
+
 
 
 # Userabfrage

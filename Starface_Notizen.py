@@ -14,11 +14,11 @@ Ganzername = ""
 Firma = ""
 
 # Überprüfen ob's eine interne Nummer ist
-if len(str(nummer)) != 2:  
+if len(str(nummer)) != 2:
     # Den aktuellen Pfad einlesen
     dirname = os.path.dirname(os.path.abspath(__file__)) + '/'
     # Einen Ordner mit dem Aktuellen Datum erstellen, falls er noch nicht existiert
-    if not os.path.exists(dirname + datetime.now().strftime('%Y-%m-%d')): 
+    if not os.path.exists(dirname + datetime.now().strftime('%Y-%m-%d')):
             os.makedirs (dirname + datetime.now().strftime('%Y-%m-%d'))
     # Den Namen der Datei festlegen
     filename = dirname + datetime.now().strftime('%Y-%m-%d') + '/' + datetime.now().strftime('%H-%M-%S__') + sys.argv[1] + "__.txt"
@@ -31,7 +31,7 @@ if len(str(nummer)) != 2:
             # Die ersten drei Einträge in der Zeile in Variablen schreiben
             Ganzername = line.split(";")[0] + " " + line.split(";")[1]
             Firma = line.split(";")[2]
-            
+
     # Die oben festgelegte Datei erstellen und den Inhalt reinschreiben
     with open(filename, "w") as text:
         text.write("Datum: " + datetime.now().strftime('%Y-%m-%d') + "\n")
