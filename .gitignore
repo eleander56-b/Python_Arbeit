@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+dist/
+*.egg-info/
+.venv/
+
+# Sensitive files - contain private keys/certificates
+*.p12
+*.ovpn
